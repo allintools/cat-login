@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef0e6">
+  <title>猫在 · 有猫等你回家</title>
+  <link rel="icon" href="assets/frames/cat-24.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261026-2">
+  <script src="mapping.js?v=20261026-2" defer></script>
+  <script src="vector-frames.js?v=20261026-2" defer></script>
+  <script src="app.js?v=20261026-2" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="猫在首页">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 14 4 4l9 5h6l9-5-1 10c7 16-29 16-22 0Z"/><path d="M11 17h.01M21 17h.01" stroke-width="3"/><path d="m14 21 2 2 2-2"/></svg>
+      <span>猫在<span class="brand-latin">MAOZAI</span></span>
+    </a>
+    <span class="header-note">给日常，留一点柔软。</span>
+  </header>
+
+  <main>
+    <section class="companion" aria-labelledby="companion-title">
+      <div class="companion-copy"><h1 id="companion-title">你回来，<br>就很喵<span class="period">。</span></h1><p>外面的世界很大，这里有一双眼睛在等你。</p></div>
+      <div class="cat-stage" id="cat-stage" tabindex="0" role="group" aria-label="跟随你的猫咪，触屏可在此拖动，键盘可用方向键调整，Escape 恢复跟随">
+        <svg class="spark spark-one" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2c0 10-4 14-14 14 10 0 14 4 14 14 0-10 4-14 14-14C20 16 16 12 16 2Z"/></svg>
+        <svg class="spark spark-two" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v24M4 16h24"/></svg>
+        <div class="cat-ground"></div>
+        <img id="cat-fallback" src="assets/frames/cat-24.svg" alt="一只戴着绿项圈的奶油色猫咪" width="600" height="600">
+        <canvas id="cat-canvas" width="900" height="900" role="img" aria-label="一只会转头看向你的奶油色猫咪" hidden></canvas>
+        <span class="hello-label">嗨，又见面了。</span>
+      </div>
+      <div class="companion-footer">
+        <p id="cat-caption">动动鼠标，和我打个招呼。</p>
+        <div class="companion-tools"><span class="load-status" id="load-status" role="status"><i></i><span id="load-text">正在唤醒猫咪…</span></span><button class="text-button" id="inspector-toggle" aria-expanded="false" aria-controls="inspector">方向面板 <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <section class="inspector" id="inspector" aria-label="7乘7方向帧预览" hidden>
+        <div class="inspector-heading"><div><strong>49 种目光</strong><p>点击任一格预览；方向键也可以切换。</p></div><button id="resume" class="small-button" type="button">恢复跟随</button></div>
+        <div class="inspector-body"><div id="frame-grid" class="frame-grid" role="group" aria-label="49张方向帧"></div><div class="frame-info"><strong id="frame-index">24 / 48</strong><span id="frame-coordinate">行 4 · 列 4</span><span id="follow-mode">正在跟随</span><a href="assets/contact-sheet.svg" target="_blank" rel="noopener">查看全部素材 ↗</a></div></div>
+      </section>
+    </section>
+
+    <section class="login" aria-labelledby="login-title">
+      <div class="login-content">
+        <svg class="little-paw" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="11" cy="16" rx="5" ry="7" transform="rotate(-25 11 16)"/><ellipse cx="23" cy="10" rx="5" ry="7"/><ellipse cx="35" cy="16" rx="5" ry="7" transform="rotate(25 35 16)"/><path d="M12 33c0-7 6-13 11-13s13 7 13 14c0 10-9 5-13 5s-11 3-11-6Z"/></svg>
+        <h2 id="login-title">欢迎回家</h2>
+        <p class="login-intro">登录猫在，接住今天的小美好。</p>
+        <form id="login-form">
+          <label for="email">邮箱地址</label>
+          <input type="email" id="email" name="email" autocomplete="username" placeholder="you@example.com" required maxlength="254">
+          <div class="password-label"><label for="password">密码</label><button type="button" class="text-button" id="forgot">忘记密码？</button></div>
+          <div class="password-field"><input type="password" id="password" name="password" autocomplete="current-password" placeholder="输入你的密码" minlength="6" required maxlength="128"><button type="button" id="password-toggle" aria-label="显示密码" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path id="eye-slash" d="m4 3 16 18" hidden/></svg></button></div>
+          <p class="privacy-hint" id="privacy-hint">输密码时，我会乖乖看向别处。</p>
+          <label class="remember"><input type="checkbox" id="gentle-mode"><span>安静陪伴 <small>减少切换动画</small></span></label>
+          <button class="primary-button" type="submit" id="submit">登录，猫在等你 <span aria-hidden="true">→</span></button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <div class="divider"><span>或者，先认识一下</span></div>
+        <button type="button" id="demo" class="secondary-button">免登录体验 <span aria-hidden="true">↗</span></button>
+        <p class="demo-note">这是交互原型，账号与密码不会被发送或保存。</p>
+      </div>
+      <div class="welcome-content" id="welcome" hidden aria-live="polite"><svg class="little-paw" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="11" cy="16" rx="5" ry="7"/><ellipse cx="24" cy="10" rx="5" ry="7"/><ellipse cx="37" cy="16" rx="5" ry="7"/><path d="M12 33c0-7 6-13 12-13s12 7 12 14c0 10-8 5-12 5s-12 3-12-6Z"/></svg><h2 tabindex="-1" id="welcome-title">你来了，真好。</h2><p>今天也辛苦了。<br>把鼠标交给猫咪，让心情慢一点。</p><button class="primary-button" type="button" id="back">返回登录页 <span aria-hidden="true">↩</span></button><p class="demo-note">体验已开启 · 仅在本页演示</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>猫在。陪伴不必说太多。</span><span>原创占位角色 · 可替换为你的猫咪</span></footer>
+  <noscript><p class="noscript">请开启 JavaScript 以体验猫咪跟随；当前显示静态居中帧。</p></noscript>
+</body>
+</html>

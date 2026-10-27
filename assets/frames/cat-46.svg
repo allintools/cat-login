@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <title>原创猫咪，方向行 7 列 5</title>
+  <g stroke="#493d32" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M391 461 C505 484 503 392 464 395 C436 398 472 452 398 424" fill="#c9a17a"/>
+    <path d="M224 347 C194 379 191 453 204 488 C215 515 383 516 397 484 C408 449 401 382 374 350" fill="#e3bc92"/>
+    <path d="M258 381 C231 419 238 485 262 493 L344 493 C365 460 363 414 337 383" fill="#f8e5c7" stroke="none"/>
+    <path d="M234 445 L230 489 C229 510 283 514 286 490 L289 458 M318 458 L320 490 C322 514 375 510 373 490 L368 445" fill="#e3bc92"/>
+    <path d="M249 491 L249 501 M268 492 L268 502 M339 492 L339 502 M358 491 L358 501" stroke-width="3.5"/>
+    <g transform="translate(7 15) rotate(1.6666666666666665 300 295)">
+      <path d="M174 239 C157 199 153 118 175 109 C195 101 239 139 259 154 C285 146 322 146 349 154 C372 132 410 104 427 110 C449 120 443 204 426 241 C449 274 446 330 416 359 C368 410 228 410 181 357 C153 326 151 276 174 239Z" fill="#efd1a8"/>
+      <path d="M179 133 C176 159 180 186 187 206 L227 166Z M422 133 C426 158 419 188 414 207 L376 166Z" fill="#d59f8d" stroke="none"/>
+      <path d="M275 156 L282 186 M302 151 L304 185 M330 157 L325 187" stroke="#ba9067" stroke-width="12"/>
+      <path d="M171 286 L197 293 M173 314 L196 316 M430 286 L407 293 M428 314 L407 316" stroke="#ba9067" stroke-width="9"/>
+      <ellipse cx="241" cy="264" rx="39" ry="43" fill="#fff8e9"/>
+      <ellipse cx="363" cy="264" rx="39" ry="43" fill="#fff8e9"/>
+      <ellipse cx="245" cy="275" rx="20" ry="27" fill="#493d32" stroke="none"/>
+      <ellipse cx="367" cy="275" rx="20" ry="27" fill="#493d32" stroke="none"/>
+      <ellipse cx="239" cy="266" rx="6" ry="8" fill="#fffdf6" stroke="none"/>
+      <ellipse cx="361" cy="266" rx="6" ry="8" fill="#fffdf6" stroke="none"/>
+      <path d="M212 212 Q231 205 252 211 M351 211 Q371 205 391 212" fill="none" stroke-width="4"/>
+      <ellipse cx="208" cy="321" rx="20" ry="10" fill="#dfab95" stroke="none"/>
+      <ellipse cx="397" cy="321" rx="20" ry="10" fill="#dfab95" stroke="none"/>
+      <g transform="translate(2.6666666666666665 6)">
+        <path d="M280 310 Q302 300 324 310 C321 332 283 333 280 310Z" fill="#fff4dd" stroke="none"/>
+        <path d="M292 304 Q302 299 312 304 L302 314Z" fill="#a36d61" stroke-width="3.5"/>
+        <path d="M302 314 L302 324 M282 325 Q292 337 302 324 Q312 337 322 325" fill="none" stroke-width="3.5"/>
+      </g>
+      <path d="M199 328 L146 318 M198 342 L148 350 M404 328 L457 318 M406 342 L455 351" fill="none" stroke-width="3.5"/>
+    </g>
+    <path d="M240 390 Q302 411 367 388 L365 410 Q305 431 241 412Z" fill="#738269" stroke="none"/>
+    <circle cx="305" cy="416" r="13" fill="#d9b56b" stroke-width="3"/>
+    <path d="M305 410 L305 416" stroke-width="3"/>
+  </g></svg>

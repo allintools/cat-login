@@ -1,0 +1,18 @@
+# 本地工具、过程记录与敏感配置
+.impeccable/
+.tools/
+AGENTS.md
+agent.md
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.pfx
+*.zip
+*.log
+
+# 系统与依赖缓存
+node_modules/
+.DS_Store
+Thumbs.db
